@@ -1,13 +1,13 @@
 # Project-1 Architecture Overview
 
-
+```yaml
 /django-microservices/
 ├── service_1_accounts/ # User authentication and roles
 ├── service_2_restaurants/ # Restaurant management
 ├── service_3_employee/ # Employee management per restaurant
 ├── common_libs/ # Shared logic: env loader, API clients, auth middleware
 └── docker-compose.yml # Orchestration of all services
-
+```
 ## 🔌 Services Overview
 
 ```yaml
