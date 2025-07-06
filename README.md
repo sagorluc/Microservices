@@ -7,6 +7,6 @@ Each microservice runs independently with its own database and Docker container.
 ---
 
 ## 🧱 Architecture Overview
-- Click the link to see the overview: [Project-1 Overview]([https://github.com/sagorluc/Microservices.git/Project-1](https://github.com/sagorluc/Microservices/tree/main/Project-1)
+- Click the link to see the overview: [Project-1 Overview](https://github.com/sagorluc/Microservices/tree/main/Project-1)
 
 
