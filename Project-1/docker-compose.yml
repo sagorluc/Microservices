@@ -1,1 +1,55 @@
+version: "3.9"
 
+services:
+  accounts:
+    build:
+      context: ./service_1_accounts
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./service_1_accounts:/app
+      - ./common_libs:/common_libs  # ✅ Mount shared .env directory
+    working_dir: /app
+    command: >
+      sh -c "python manage.py makemigrations &&
+            python manage.py migrate &&
+            python manage.py runserver 0.0.0.0:8000"
+
+  restaurants:
+    build:
+      context: ./service_2_restaurants
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./service_2_restaurants:/app
+      - ./common_libs:/common_libs  # ✅ Mount shared .env directory
+    working_dir: /app
+    command: >
+      sh -c "python manage.py makemigrations &&
+            python manage.py migrate &&
+            python manage.py runserver 0.0.0.0:8001"
+
+  employees:
+    build:
+      context: ./service_3_employees
+    ports:
+      - "8002:8002"
+    volumes:
+      - ./service_3_employees:/app
+      - ./common_libs:/common_libs  # ✅ Mount shared .env directory
+    working_dir: /app
+    command: >
+      sh -c "python manage.py makemigrations &&
+            python manage.py migrate &&
+            python manage.py runserver 0.0.0.0:8002"
+  
+
+  # payments:
+  #   build:
+  #     context: ./service_4_payment
+  #   ports:
+  #     - "8003:8003"
+  #   volumes:
+  #     - ./service_4_payment:/app
+  #   working_dir: /app/payments
+  #   command: python manage.py runserver 0.0.0.0:8003
