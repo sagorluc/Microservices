@@ -8,5 +8,6 @@ Each microservice runs independently with its own database and Docker container.
 
 ## 🧱 Architecture Overview
 - Click the link to see the overview: [Project-1 Overview](https://github.com/sagorluc/Microservices/tree/main/Project-1)
+- AWS Deployment with NGINX server, SSH: [AWS Nginx Config](https://gist.github.com/piyushgarg-dev/8b14c87c8ff4d626ecbc747b6b9fc57f)
 
 
